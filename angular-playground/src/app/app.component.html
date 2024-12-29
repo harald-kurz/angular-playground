@@ -226,7 +226,8 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running and your first name is {{firstNameUpperCase()}}. 🎉</p>
+      <p>Congratulations! Your app is running and your first name is {{firstNameUpper()}}. 🎉</p>
+      <button (click)="changeName()">Change name</button>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
