@@ -1,6 +1,6 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ExampleService } from './services/example.service';
 
 
 @Component({
@@ -23,4 +23,7 @@ export class AppComponent {
   changeUserRole() {
     this.isAdmin = !this.isAdmin;
   }
+
+  private exampleService = inject(ExampleService);
+  result = this.exampleService.add(2,3);
 }
