@@ -226,15 +226,7 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running and your first name is {{firstNameUpper()}}. 🎉</p>
-      <button (click)="changeName()">Change name</button>
-
-      @if(isAdmin){
-        <p>Admin Settings</p>
-      } @else {
-        <p>User Settings</p>
-      }
-      <button (click)="changeUserRole()">Change User Role</button>
+      <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

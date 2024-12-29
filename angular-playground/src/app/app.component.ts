@@ -12,18 +12,4 @@ import { ExampleService } from './services/example.service';
 
 export class AppComponent {
   title = 'angular-playground';
-  firstName = signal('Toni');
-  firstNameUpper = computed(() => this.firstName().toUpperCase());
-  isAdmin = false;
-
-  changeName() {
-    this.firstName.set('RehHirschHaseWald');
-  }
-
-  changeUserRole() {
-    this.isAdmin = !this.isAdmin;
-  }
-
-  private exampleService = inject(ExampleService);
-  result = this.exampleService.add(2,3);
 }
