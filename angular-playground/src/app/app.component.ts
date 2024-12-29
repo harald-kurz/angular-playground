@@ -1,6 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+const firstName = signal('Toni');
+const firstNameUpper = computed(() => firstName().toUpperCase());
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
@@ -10,9 +13,7 @@ import { RouterOutlet } from '@angular/router';
 
 export class AppComponent {
   title = 'angular-playground';
+  firstNameUpperCase = firstNameUpper;
 }
-
-const firstName = signal('Toni');
-const firstNameUpper = computed(() => firstName().toUpperCase());
 
 firstName.set('RehHirschHaseWald');
