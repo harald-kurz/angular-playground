@@ -1,3 +1,10 @@
-@for(user of users; track user.id){
-  <p>{{user.name}} - {{user.credits}}</p>
+
+@defer () {
+  @for(user of users; track user.id){
+    <p>{{user.name}} - {{user.credits}}</p>
+  }
+} @placeholder {
+  <p>Users will be loaded here</p>
+} @loading (minimum 1s) {
+  <p>loading Users...</p>
 }
