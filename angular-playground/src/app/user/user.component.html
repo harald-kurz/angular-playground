@@ -8,3 +8,14 @@
 } @loading (minimum 1s) {
   <p>loading Users...</p>
 }
+
+<form [formGroup]="newUserForm" (ngSubmit)="OnNewUserSave()">
+  <label>Name
+    <input type="text" formControlName="name" />
+  </label>
+  <label>Credits
+    <input type="number" formControlName="credits" />
+  </label>
+  <button type="submit" [disabled]="!newUserForm.valid">Add new user</button>
+</form>
+<p>{{this.newUserForm.value.name}}</p>
